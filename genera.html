@@ -44,9 +44,88 @@
     document.getElementById('genera').addEventListener('click', () => {
       const usernames = generateUniqueList(1770, 3);
       const passwords = generateUniqueList(1770, 3);
-      const users = usernames.map((u, i) => ({ username: u, password: passwords[i], level: "student", id : i + 1 , classe: Math.floor(i/25)+1 , used: false }));
+      const users = usernames.map((u, i) => ({ username: u, password: passwords[i], level: "student", id : i + 1 , classe: assegnaClasse(Math.floor(i/25)+1) , used: false }));
       downloadJSON(users, 'users.json');
+    });
+
+    function assegnaClasse( i){
+    switch(i){
+        case 1:  return "1AEE SEDE";
+        case 2:  return "1AP SEDE";
+        case 3:  return "1ASC SEDE";
+        case 4:  return "1BEE EUROPA";
+        case 5:  return "1BP SEDE";
+        case 6:  return "1BSC SEDE";
+        case 7:  return "1CEE EUROPA";
+        case 8:  return "1ELO SEDE";
+        case 9:  return "1GII EUROPA";
+        case 10: return "1HII EUROPA";
+        case 11: return "1III EUROPA";
+        case 12: return "1LII EUROPA";
+        case 13: return "1MII EUROPA";
+        case 14: return "1NII EUROPA";
+        case 15: return "1XTU SEDE";
+        case 16: return "1YTU EUROPA";
+        case 17: return "1ZTU EUROPA";
+        case 18: return "2AEE SEDE";
+        case 19: return "2AP SEDE";
+        case 20: return "2ASC SEDE";
+        case 21: return "2BEE EUROPA";
+        case 22: return "2BP SEDE";
+        case 23: return "2BSC SEDE";
+        case 24: return "2ELO SEDE";
+        case 25: return "2HII EUROPA";
+        case 26: return "2III EUROPA";
+        case 27: return "2LII EUROPA";
+        case 28: return "2MII EUROPA";
+        case 29: return "2XTU SEDE";
+        case 30: return "2YTU EUROPA";
+        case 31: return "2ZTU EUROPA";
+        case 32: return "3AEI SEDE";
+        case 33: return "3AII EUROPA";
+        case 34: return "3AP SEDE";
+        case 35: return "3ASC SEDE";
+        case 36: return "3ATI SEDE";
+        case 37: return "3BEI SEDE";
+        case 38: return "3BII EUROPA";
+        case 39: return "3BP SEDE";
+        case 40: return "3BSC SEDE";
+        case 41: return "3CII EUROPA";
+        case 42: return "3DII EUROPA";
+        case 43: return "3ELO SEDE";
+        case 44: return "3XTU SEDE";
+        case 45: return "3YTU SEDE";
+        case 46: return "4AEI SEDE";
+        case 47: return "4AII EUROPA";
+        case 48: return "4AP SEDE";
+        case 49: return "4ASC SEDE";
+        case 50: return "4ATI SEDE";
+        case 51: return "4BII EUROPA";
+        case 52: return "4BSC SEDE";
+        case 53: return "4BTI SEDE";
+        case 54: return "4CII EUROPA";
+        case 55: return "4DII EUROPA";
+        case 56: return "4ELO SEDE";
+        case 57: return "4XTU SEDE";
+        case 58: return "4YTU SEDE";
+        case 59: return "5-LO SEDE";
+        case 60: return "5-TI SEDE";
+        case 61: return "5AEI SEDE";
+        case 62: return "5AII EUROPA";
+        case 63: return "5AP SEDE";
+        case 64: return "5ASC SEDE";
+        case 65: return "5BII EUROPA";
+        case 66: return "5BP SEDE";
+        case 67: return "5CII EUROPA";
+        case 68: return "5DII EUROPA";
+        case 69: return "5ELO SEDE";
+        case 70: return "5XTU SEDE";
+        case 71: return "5YTU SEDE";
+        default: return "";
+    }
+}
     });
   </script>
 </body>
 </html>
+
